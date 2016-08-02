@@ -1,28 +1,18 @@
 <?php
 
 /**
- * /admin/mycount
+ * /admin/profile
  */
 Router::connect(
-    '/admin/mycount',
+    '/admin/settings/profile',
     array(
         'plugin'=>'amanager',
         'controller'=>'users',
-        'action'=>'mycount',
+        'action'=>'profile',
     )
 );
 
-/**
- * Usuários
- */
-Router::connect(
-    '/admin/users',
-    array(
-        'plugin'=>'amanager',
-        'controller'=>'users',
-        'action'=>'index'
-    )
-);
+
 Router::connect(
     '/admin/users/:action/*',
     array(

@@ -23,6 +23,21 @@ class UsersController extends AmanagerAppController {
     $this->set('users', $this->paginate());
   }
 
+
+  /**
+   * index method
+   *
+   * @return void
+   */
+  public function listar() {
+		$this->theme = "Sistema";
+		$this->pageTitle = 'Usuários';
+    $this->User->recursive = 0;
+    $this->set('users', $this->paginate());
+  }
+
+
+
   /**
    * view method
    *
@@ -255,10 +270,10 @@ class UsersController extends AmanagerAppController {
     }
   }
 
-    public function admin_mycont(){
+    public function profile(){
 
-			$this->theme = 'Admin';
-
+			$this->theme = 'Sistema';
+			$this->pageTitle = "Dados de usuário";
 			$this->User->id = $this->Amanager->get_user_logged('id');
 			if (!$this->User->exists()) {
 					throw new NotFoundException(__('Invalid user'));

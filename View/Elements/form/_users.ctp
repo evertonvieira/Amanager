@@ -49,7 +49,7 @@
 						'class'=>'form-control',
 					)
 				);
-				$options = array('1'=>__d('amanager', 'Active'),'2'=>__d('amanager', 'Inactive'));
+				$options = array('1'=>__d('amanager', 'Active'),'0'=>__d('amanager', 'Inactive'));
 				echo $this->Form->input('status',
 					array(
 						'options'=>$options,
